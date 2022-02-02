@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "ws": "^8.4.2"
   },
   "scripts": {
     "start": "node ./src/index.js"
