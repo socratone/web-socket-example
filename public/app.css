@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chatting-list {
+  width: 300px;
+  min-height: 300px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid gainsboro;
+}
+
+.chatting-item {
+  list-style: none;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button {
+  border: 0;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+}
