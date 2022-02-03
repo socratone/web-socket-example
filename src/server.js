@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/app.html'));
 });
 
-const server = http.createServer(app);
-const socketServer = new WebSocket.Server({ server }); // http와 ws를 같은 포트에서 사용 가능하다.
+const httpServer = http.createServer(app);
+const socketServer = new WebSocket.Server({ server: httpServer }); // http와 ws를 같은 포트에서 사용 가능하다.
 
 const sockets = [];
 
@@ -24,6 +24,6 @@ socketServer.on('connection', (socket) => {
   socket.send('채팅방에 입장했습니다.');
 });
 
-server.listen(3000, () => {
+httpServer.listen(3000, () => {
   console.log('The application is listening on port 3000!');
 });
